@@ -31,3 +31,4 @@ ToDo
 - remove sectioning between user and staff
 - redirect to the dashboard after login
 - insert a group membership
+- possibility to add files to a ticket
