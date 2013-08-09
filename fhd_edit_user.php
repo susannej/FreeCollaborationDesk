@@ -77,10 +77,9 @@ echo $actionstatus;?>
 
 	<tr><td>User Level</td>
 	<td><select name="user_level">
-	<option selected value="<?php echo $site_users->user_level;?>"><?php echo show_user_level($site_users->user_level);?></option>
-	<option value="1"><?php echo show_user_level(1);?></option>
-	<option value="2"><?php echo show_user_level(2);?></option>
-	<option value="0"><?php echo show_user_level(0);?></option>
+	<option value="1" <?php if ($site_users->user_level == 1) echo "selected";?>><?php echo show_user_level(1);?></option>
+	<option value="2" <?php if ($site_users->user_level == 2) echo "selected";?>><?php echo show_user_level(2);?></option>
+	<option value="0" <?php if ($site_users->user_level == 0) echo "selected";?>><?php echo show_user_level(0);?></option>
 	</select></td></tr>
 	
 	<tr><td>Name</td>
