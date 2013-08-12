@@ -38,20 +38,20 @@ $opentickets = $db->get_var("select count(call_id) from site_calls where call_st
 
 <table class="<?php echo $table_style_1;?>" style="max-width: 250px;">
 <tr>
-	<td>Open Tickets</td><td><a href="fhd_calls.php"><?php echo $opentickets; ?></a></td>
+	<td>Open Tickets</td><td style='text-align: right;'><a href="fhd_calls.php"><?php echo $opentickets; ?></a></td>
 </tr>
 <tr>
-	<td>Total Tickets</td><td><?php echo $db->get_var("select count(call_id) from site_calls where call_status < 2  $queryadd;")?></td>
+	<td>Total Tickets</td><td style='text-align: right;'><?php echo $db->get_var("select count(call_id) from site_calls where call_status < 2  $queryadd;")?></td>
 </tr>
 <?php if(isset($_SESSION['admin'])){ ?>
 <tr>
-	<td>Pending Users</td><td><a href="fhd_users.php?pending=1"><?php echo $db->get_var("select count(user_id) from site_users where user_pending = 1;")?></a></td>
+	<td>Pending Users</td><td style='text-align: right;'><a href="fhd_users.php?pending=1"><?php echo $db->get_var("select count(user_id) from site_users where user_pending = 1;")?></a></td>
 </tr>
 <tr>
-	<td>Users</td><td><a href="fhd_users.php"><?php echo $db->get_var("select count(user_id) from site_users;")?></a></td>
+	<td>Users</td><td style='text-align: right;'><a href="fhd_users.php"><?php echo $db->get_var("select count(user_id) from site_users;")?></a></td>
 </tr>
 <tr>
-	<td>Notes</td><td><?php echo $db->get_var("select count(note_id) from site_notes;")?></td>
+	<td>Notes</td><td style='text-align: right;'><?php echo $db->get_var("select count(note_id) from site_notes;")?></td>
 </tr>
 
 <?php } ?>

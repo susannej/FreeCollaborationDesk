@@ -29,6 +29,6 @@ ToDo
 - internationalisation
 - remove sectioning between add and edit user
 - ~~remove sectioning between user and staff~~ (take user as someone who isn't allowed to work on tickets...)
-- redirect to the dashboard after login
+- ~~redirect to the dashboard after login~~
 - insert a group membership
 - possibility to add files to a ticket

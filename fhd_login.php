@@ -75,26 +75,10 @@ $_SESSION['user_name']=$user_name;
 $_SESSION['user_level']=$user_level;
 $_SESSION['hit'] = 0;
 
-include("includes/all-nav.php");
-
-echo "<!-- <p>$user_id</p> -->";
-echo "<h2>Welcome, $user_name</h2>";
-
 //record some details about this login
 $lastip = $_SERVER['REMOTE_ADDR'];
-
-//$last_login = mktime($dateTime->format("n/j/y g:i a"));
 $last_login = date(time());
-//echo $dateTime->format("Y-m-d h:i:s");
-
 $db->query("UPDATE site_users SET last_ip = '$lastip',last_login = '$last_login' WHERE user_id = $user_id;");
-//$d_last_login = $db->get_var("select last_login from site_users where user_id = $num limit 1;");
-?>
 
-<h3><a href="fhd_user_call_add.php" class="btn btn-large btn-primary btn-success">Open Ticket</a></h3>
-
-<h3><a href="fhd_calls.php" class="btn btn-large btn-primary">View Tickets</a></h3>
-
-<?php
-include("includes/footer.php");
+header('Location: fhd_dashboard.php');
 ?>

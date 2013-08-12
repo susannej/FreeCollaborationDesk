@@ -118,7 +118,7 @@ echo $actionstatus;?>
 <input type='hidden' name='url_user_id' value='<?php echo $url_user_id;?>'>
 <input type='hidden' name='nacl' value='<?php echo $nacl;?>'>
 <input type='hidden' name='update' value='1'>
-<input type="submit" value="update" class="btn btn-primary btn-large">
+<input type="submit" value="update" class="btn btn-primary">
 </form>
 
 <?php
