@@ -119,7 +119,7 @@ foreach ($device_name as $device )
 	<tr><td valign="top">Details</td><td><textarea rows="5" name="call_details" id="call_details" class="input-xxlarge" required></textarea></td></tr>
 </table>
 <input type='hidden' name='nacl' value='<?php echo $nacl;?>'>
-<input type="submit" value="Open Ticket" class="btn btn-primary btn-large btn-success">
+<input type="submit" value="Open Ticket" class="btn btn-primary btn-success">
 </form>
 <!-- validation -->
 <script type="text/javascript" src="js/livevalidation_standalone.compressed.js"></script>

@@ -31,6 +31,10 @@ $site_calls = $db->get_results($myquery);
 $num = $db->num_rows;
 //$db->debug();
 echo "<h4><i class='icon-tags'></i> Open Tickets [ $num ]</h4>";
+
+$addpage = ($user_level == 1) ? "fhd_user_call_add.php" : "fhd_call_add.php";
+echo "<h5><i class='icon-plus'></i> <a href='$addpage'>Add New</a></h5>";
+
 if ($num > 0){
 ?>
 <table class="<?php echo $table_style_1;?>">

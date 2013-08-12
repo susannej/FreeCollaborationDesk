@@ -106,7 +106,7 @@ foreach ($staff_name as $staff )
 	</select></td></tr>
 </table>
 <input type='hidden' name='nacl' value='<?php echo $nacl;?>'>
-<input type="submit" value="add" class="btn btn-large btn-primary">
+<input type="submit" value="add" class="btn btn-primary">
 </form>
 <?php
 if(isset($_SESSION['name'])){
