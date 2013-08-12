@@ -55,8 +55,8 @@ foreach ( $site_calls as $call )
 	$bg = ($user_pending == 1) ? " class='usernote'" : "";
 	$call_count = $db->get_var("SELECT count(call_id) from site_calls WHERE (call_user = $user_id) AND (call_status = 0);");
 	echo "<tr>\n";
-	echo "<td".$bg."><a href='fhd_edit_user.php?url_user_id=$user_id'>$user_id</a></td>\n";
-	echo "<td align='center'><a href='fhd_calls.php?user_id=$user_id'>$call_count</a></td>\n";
+	echo "<td".$bg." style='text-align: right;'><a href='fhd_edit_user.php?url_user_id=$user_id'>$user_id</a></td>\n";
+	echo "<td style='text-align: right;'><a href='fhd_calls.php?user_id=$user_id'>$call_count</a></td>\n";
 	echo "<td>$user_name</td>\n";
 	echo "<td>$user_email</td>\n";
 	echo "<td>$user_phone</td>\n";

@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include("includes/session.php");
-include ("includes/checksession.php");
+include("includes/checksession.php");
 include("includes/checksessionadmin.php");
 ?>
 <!DOCTYPE html>
@@ -87,11 +87,11 @@ echo "<tr><td>$type_name</td>";
 	if ($type == 0) {
 		echo "<td>$type_email</td><td>$type_location</td><td>$type_phone</td>\n";
 	}
-echo "<td align='center'><a href='fhd_mod_types.php?id=$type_id&action=edit'><i class='icon-edit' title='edit'></i></a></td>\n";
-echo "<td align='center'>$deletelink</td>\n";
+echo "<td style='text-align: center;'><a href='fhd_mod_types.php?id=$type_id&action=edit'><i class='icon-edit' title='edit'></i></a></td>\n";
+echo "<td style='text-align: center;'>$deletelink</td>\n";
 		//don't show for staff
 		if ($type <> 0) {
-echo "<td>$count</td>\n";
+echo "<td style='text-align: right;'>$count</td>\n";
 		}
 echo "</tr>\n";
 $count = NULL;
