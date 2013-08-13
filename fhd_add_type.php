@@ -11,7 +11,7 @@ include("includes/checksessionadmin.php");
 <?php
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
 include("includes/ez_sql_mysqli.php");

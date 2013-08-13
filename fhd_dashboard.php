@@ -10,7 +10,7 @@ include("includes/checksession.php");
 <?php include("includes/header.php");?>	
 <?php include("includes/all-nav.php");?>
 
-<h3><i class="icon-wrench"></i> Help Desk Dashboard</h3>
+<h4><i class="icon-info-sign"></i> Help Desk Dashboard</h4>
 
 <?php
 include("fhd_config.php");
@@ -34,7 +34,7 @@ $opentickets = $db->get_var("select count(call_id) from site_calls where call_st
 //$db->debug();
 ?>
 
-<h4><i class="icon-user"></i> User Name: <?php echo $user_name;?></h4>
+<!-- h4><i class="icon-user"></i> User Name: <?php echo $user_name;?></h4 -->
 
 <table class="<?php echo $table_style_1;?>" style="max-width: 250px;">
 <tr>

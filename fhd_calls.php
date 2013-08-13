@@ -80,7 +80,7 @@ foreach ( $site_calls as $call )
 <?php
 if(isset($_SESSION['user_name'])){
 //the session variable is registered, the user is allowed to see anything that follows
-echo "<h5><strong>Name:</strong> " . $_SESSION['user_name'] . "</h5>";
+// echo "<h5><strong>Name:</strong> " . $_SESSION['user_name'] . "</h5>";
 }
 include("includes/footer.php");
 ?>	

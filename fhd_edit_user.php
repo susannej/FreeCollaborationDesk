@@ -12,7 +12,7 @@ include("includes/checksessionadmin.php");
 <?php 
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include('includes/functions.php');
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
@@ -67,6 +67,8 @@ if (isset($_REQUEST['url_user_id'])){
 $nacl = md5(AUTH_KEY.$db->get_var("select last_login from site_users where user_id = $user_id;"));
 echo $actionstatus;?>
 
+<h4>Edit User: <?php echo $site_users->user_name;?></h4>
+
 <form action="fhd_edit_user.php" method="post" class="form-horizontal">
 <table class="<?php echo $table_style_2;?>">
 	<tr><td>User Login </td>
@@ -120,6 +122,8 @@ echo $actionstatus;?>
 <input type='hidden' name='update' value='1'>
 <input type="submit" value="update" class="btn btn-primary">
 </form>
+
+<h5><i class="icon-arrow-left"></i> <a href="fhd_users.php">Back to user list</a></h5>
 
 <?php
 if(isset($_SESSION['name'])){

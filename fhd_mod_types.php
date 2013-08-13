@@ -10,7 +10,7 @@ include("includes/checksessionadmin.php");
 <?php
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
 include("includes/ez_sql_mysqli.php");
@@ -48,11 +48,15 @@ if ($num == 0) {
 $nacl = md5(AUTH_KEY.$db->get_var("select last_login from site_users where user_id = $user_id;"));
 ?>
 
-<h4>Edit Type</h4>
-<?php echo $actionstatus;?>
-
 <?php if ($num > 0) { 
 $site_types = $db->get_results("SELECT type_id,type,type_name,type_email,type_location,type_phone from site_types where type_id = $type_id order by type_name;");
+?>
+
+<h4>Edit <?php show_type_name($site_types[0]->type); ?></h4>
+
+<?php
+echo $actionstatus;
+
 echo "<form action='' method='post' class='form-horizontal'>\n";
 echo "<table class='$table_style_3'>\n<input type='hidden' name='nacl' value='$nacl'>\n<input type='hidden' name='type_id' value='$type_id'>\n";
 

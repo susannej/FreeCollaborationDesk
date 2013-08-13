@@ -11,7 +11,7 @@ include("includes/checksessionadmin.php");
 <?php 
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include('includes/functions.php');
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
@@ -91,6 +91,8 @@ $nacl = md5(AUTH_KEY.$db->get_var("select last_login from site_users where user_
 <input type='hidden' name='nacl' value='<?php echo $nacl;?>'>
 <input type="submit" value="Add User" class="btn btn-primary">
 </form>
+
+<h5><i class="icon-arrow-left"></i> <a href="fhd_users.php">Back to user list</a></h5>
 
 <?php
 if(isset($_SESSION['name'])){

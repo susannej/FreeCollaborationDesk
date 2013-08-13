@@ -9,7 +9,7 @@ include("includes/checksession.php");
 <?php
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
 include("includes/ez_sql_mysqli.php");
@@ -31,7 +31,8 @@ $myquery = "SELECT user_id,user_name,user_email,user_phone,user_pending,user_lev
 $site_calls = $db->get_results($myquery);
 $num = $db->num_rows;
 //$db->debug();
-echo "<h4>$num Users</h4>";
+echo "<h4><i class='icon-user'></i> Users [ $num ]</h4>";
+echo "<h5><i class='icon-plus'></i> <a href='fhd_admin_register.php'>Add New</a></h5>";
 if ($num > 0){
 ?>
 <table class="<?php echo $table_style_2;?>">
@@ -66,11 +67,12 @@ foreach ( $site_calls as $call )
 }
 ?>
 </table>
+<h5><i class="icon-arrow-left"></i> <a href="fhd_settings.php">Back to Settings</a></h5>
 
 <?php
 if(isset($_SESSION['user_name'])){
 //the session variable is registered, the user is allowed to see anything that follows
-echo "<h5>Current User: " . $_SESSION['user_name'] . "</h5>";
+//echo "<h5>Current User: " . $_SESSION['user_name'] . "</h5>";
 }
 include("includes/footer.php");
 ?>	

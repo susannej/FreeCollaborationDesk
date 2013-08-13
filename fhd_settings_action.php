@@ -11,7 +11,7 @@ include("includes/checksessionadmin.php");
 <?php
 include("includes/header.php");
 include("includes/all-nav.php");
-include("includes/admin-nav.php");
+//include("includes/admin-nav.php");
 include("fhd_config.php");
 include("includes/ez_sql_core.php");
 include("includes/ez_sql_mysqli.php");
@@ -36,6 +36,7 @@ if (isset($_GET['nacl'])){
 //check type variable
 $type = checkid($_GET['type']);
 ?>
+
 <h4><?php show_type_name($type);?></h4>
 <h5><i class="icon-plus"></i> <a href="fhd_add_type.php?type=<?php echo $type;?>">Add New</a></h5>
 <?php
@@ -99,7 +100,7 @@ $count = NULL;
 ?>
 </table>
 <?php } ?>
-
+<h5><i class="icon-arrow-left"></i> <a href="fhd_settings.php">Back to Settings</a></h5>
 <?php
 if(isset($_SESSION['name'])){
 //the session variable is registered, the user is allowed to see anything that follows
